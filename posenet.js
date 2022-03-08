@@ -169,7 +169,7 @@ function key_operations() {
     } else if (key = 't') { 
       //textSize(40)
       text('Training started!', 50,50)
-      state = 'Model training';
+      state = 'training';
       model.normalizeData();
       let options = {epochs: 150}; //temp
       model.train(options, whileTraining, finishedTraining);
