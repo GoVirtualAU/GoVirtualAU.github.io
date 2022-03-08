@@ -239,7 +239,7 @@ function timer2() {
   let currTime = new Date();
   var timeDiff = currTime - correct_currTime; //in ms
   // strip the ms
-  timeDiff /= 1000;
+  timeDiff /= 3000;
   // get seconds 
   let seconds = Math.round(timeDiff);
   return seconds
@@ -281,7 +281,7 @@ function color_background() {
       let tot_sec = timer1()
       valid_seconds = prev_valid_seconds+tot_sec
       if (label == 'wrong') {
-        let seconds = timer2()-1
+        let seconds = timer2()
         hunch_seconds = prev_hunch_seconds+seconds
         background(100,0,0,100) //r,g,b,opacity
       } else {
