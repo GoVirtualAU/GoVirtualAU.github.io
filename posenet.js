@@ -239,9 +239,14 @@ function timer2() {
   let currTime = new Date();
   var timeDiff = currTime - correct_currTime; //in ms
   // strip the ms
-  timeDiff /= 3000;
+  timeDiff /= 1000;
   // get seconds 
-  let seconds = Math.round(timeDiff);
+  let seconds = Math.round(timeDiff-3);
+  if (seconds < 0){
+	  let seconds == 0
+  } else {
+	  let seconds == seconds
+  }
   return seconds
 }
 
