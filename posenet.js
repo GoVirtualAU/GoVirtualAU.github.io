@@ -169,15 +169,15 @@ function key_operations() {
     } else if (key = 't') { 
       //textSize(40)
       text('Training started!', 50,50)
-      state = 'training';
+      state = 'Model training';
       model.normalizeData();
       let options = {epochs: 150}; //temp
       model.train(options, whileTraining, finishedTraining);
    }
   } else {
     if (state == 'prediction') {
-      text('Now Predicting',50,50)
-      select('#status1').html('Now Predicting') // sets the status variable in index.html
+      text('Now Monitoring',50,50)
+      select('#status1').html('Now Monitoring') // sets the status variable in index.html
       if (state2 == 'sitting') {
       check_posture();
       }
@@ -188,12 +188,12 @@ function key_operations() {
 
 function whileTraining(epoch, loss) {
   //textSize(40)
-  text('Please wait while the training the going on!', 50,70)
+  text('Please wait while the training is going on!', 50,70)
 }
 
 function finishedTraining() {
   //textSize(40)
-  text('Now Predicting!', 50,50)
+  text('Now Monitoring!', 50,50)
   // After training has finished, start measuring the time.
   state = 'prediction';
   startTime = new Date();
