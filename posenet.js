@@ -121,6 +121,8 @@ function drawKeypoints()  {
     nose_pos = pose.keypoints[0];
     l_eye_pos = pose.keypoints[1];
     r_eye_pos = pose.keypoints[2];
+	l_shoulder_pos = pose.keypoints[5];
+	r_shoulder_pos = pose.keypoints[6];
     if (nose_pos.score > 0.8 &&  l_eye_pos.score > 0.8 && r_eye_pos.score > 0.8) {
       state2 = 'sitting'
       fill(0, 255, 0);
@@ -128,9 +130,12 @@ function drawKeypoints()  {
       ellipse(nose_pos.position.x, nose_pos.position.y, 10, 10);
       ellipse(l_eye_pos.position.x, l_eye_pos.position.y, 10, 10);
       ellipse(r_eye_pos.position.x, r_eye_pos.position.y, 10, 10);
+	  ellipse(l_shoulder_pos.position.x, l_shoulder_pos.position.y, 10, 10);
+	  ellipse(r_shoulder_pos.position.x, r_shoulder_pos.position.y, 10, 10);
       stroke(0, 0, 255);
       line(nose_pos.position.x, nose_pos.position.y, l_eye_pos.position.x, l_eye_pos.position.y);
       line(nose_pos.position.x, nose_pos.position.y, r_eye_pos.position.x, r_eye_pos.position.y);
+	  line(l_shoulder_pos.position.x, l_shoulder_pos.position.y,r_shoulder_pos.position.x, r_shoulder_pos.position.y);
       text('('+str(int(nose_pos.position.x))+','+str(int(nose_pos.position.y))+')',nose_pos.position.x, nose_pos.position.y+10)
       text('('+str(int(l_eye_pos.position.x))+','+str(int(l_eye_pos.position.y))+')',l_eye_pos.position.x+0, l_eye_pos.position.y-10)
       text('('+str(int(r_eye_pos.position.x))+','+str(int(r_eye_pos.position.y))+')',r_eye_pos.position.x-10, r_eye_pos.position.y-10)
