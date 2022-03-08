@@ -243,9 +243,9 @@ function timer2() {
   // get seconds 
   let seconds = Math.round(timeDiff-3);
   if (seconds < 0){
-	  let seconds == 0
+	  let seconds = 0
   } else {
-	  let seconds == seconds
+	  let seconds = seconds;
   }
   return seconds
 }
