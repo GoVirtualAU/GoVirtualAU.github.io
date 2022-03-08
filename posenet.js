@@ -176,8 +176,8 @@ function key_operations() {
    }
   } else {
     if (state == 'prediction') {
-      text('Now Predicting',50,50)
-      select('#status1').html('Now Predicting') // sets the status variable in index.html
+      text('Now Monitoring',50,50)
+      select('#status1').html('Now Monitoring') // sets the status variable in index.html
       if (state2 == 'sitting') {
       check_posture();
       }
@@ -188,12 +188,12 @@ function key_operations() {
 
 function whileTraining(epoch, loss) {
   //textSize(40)
-  text('Please wait while the training the going on!', 50,70)
+  text('Please wait while the training is going on!', 50,70)
 }
 
 function finishedTraining() {
   //textSize(40)
-  text('Now Predicting!', 50,50)
+  text('Now Monitoring!', 50,50)
   // After training has finished, start measuring the time.
   state = 'prediction';
   startTime = new Date();
@@ -281,7 +281,7 @@ function color_background() {
       let tot_sec = timer1()
       valid_seconds = prev_valid_seconds+tot_sec
       if (label == 'wrong') {
-        let seconds = timer2()
+        let seconds = timer2()-1
         hunch_seconds = prev_hunch_seconds+seconds
         background(100,0,0,100) //r,g,b,opacity
       } else {
