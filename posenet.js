@@ -241,12 +241,7 @@ function timer2() {
   // strip the ms
   timeDiff /= 1000;
   // get seconds 
-  let seconds = Math.round(timeDiff-3);
-  if (seconds < 0){
-	  let seconds = 0
-  } else {
-	  let seconds = seconds;
-  }
+  let seconds = Math.round(timeDiff);
   return seconds
 }
 
