@@ -136,10 +136,10 @@ function drawKeypoints()  {
       ellipse(r_eye_pos.position.x, r_eye_pos.position.y, 10, 10);
 	  ellipse(l_shoulder_pos.position.x, l_shoulder_pos.position.y, 10, 10);
 	  ellipse(r_shoulder_pos.position.x, r_shoulder_pos.position.y, 10, 10);
-	  ellipse(l_elbow_pos.position.x, l_elbow_pos.position.y, 10, 10);
-	  ellipse(r_elbow_pos.position.x, r_elbow_pos.position.y, 10, 10);
-	  ellipse(l_wrist_pos.position.x, l_wrist_pos.position.y, 10, 10);
-	  ellipse(r_wrist_pos.position.x, r_wrist_pos.position.y, 10, 10);
+	  //ellipse(l_elbow_pos.position.x, l_elbow_pos.position.y, 10, 10);
+	  //ellipse(r_elbow_pos.position.x, r_elbow_pos.position.y, 10, 10);
+	  //ellipse(l_wrist_pos.position.x, l_wrist_pos.position.y, 10, 10);
+	  //ellipse(r_wrist_pos.position.x, r_wrist_pos.position.y, 10, 10);
       stroke(0, 0, 255);
       line(nose_pos.position.x, nose_pos.position.y, l_eye_pos.position.x, l_eye_pos.position.y);
       line(nose_pos.position.x, nose_pos.position.y, r_eye_pos.position.x, r_eye_pos.position.y);
@@ -156,7 +156,7 @@ function drawKeypoints()  {
 
       let mid_pt_x = (nose_pos.position.x + l_eye_pos.position.x + r_eye_pos.position.x) / 3
       let mid_pt_y = (nose_pos.position.y + l_eye_pos.position.y + r_eye_pos.position.y) / 3
-      text('('+str(int(tri_area))+')',mid_pt_x, mid_pt_y)
+      //text('('+str(int(tri_area))+')',mid_pt_x, mid_pt_y)
     } else {
       state2 = 'non-sitting' //face out of frame
     }
