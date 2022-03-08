@@ -176,8 +176,8 @@ function key_operations() {
    }
   } else {
     if (state == 'prediction') {
-      text('Now Monitoring',50,50)
-      select('#status1').html('Now Monitoring') // sets the status variable in index.html
+      text('Now Predicting',50,50)
+      select('#status1').html('Now Predicting') // sets the status variable in index.html
       if (state2 == 'sitting') {
       check_posture();
       }
@@ -193,7 +193,7 @@ function whileTraining(epoch, loss) {
 
 function finishedTraining() {
   //textSize(40)
-  text('Now Monitoring!', 50,50)
+  text('Now Predicting!', 50,50)
   // After training has finished, start measuring the time.
   state = 'prediction';
   startTime = new Date();
